@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contest Aggregator</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .contest { border: 1px solid #ddd; padding: 10px; margin: 10px; }
+        .timer { font-weight: bold; color: red; }
+    </style>
+</head>
+<body>
+    <h1>Upcoming Programming Contests</h1>
+    <label for="platformFilter">Filter by Platform:</label>
+    <select id="platformFilter" onchange="filterContests()">
+        <option value="all">All</option>
+        <option value="Codeforces">Codeforces</option>
+        <option value="LeetCode">LeetCode</option>
+        <option value="CodeChef">CodeChef</option>
+    </select>
+    
+    <div id="contest-list"></div>
+    
+    <script>
+        const contests = [
+            { name: "Codeforces Round 900", platform: "Codeforces", date: "2025-02-20T18:00:00" },
+            { name: "LeetCode Weekly 400", platform: "LeetCode", date: "2025-02-22T14:30:00" },
+            { name: "CodeChef Starters 80", platform: "CodeChef", date: "2025-02-25T16:00:00" }
+        ];
+
+        function updateCountdown() {
+            contests.forEach((contest, index) => {
+                const contestDate = new Date(contest.date);
+                const now = new Date();
+                const diff = contestDate - now;
+                if (diff > 0) {
+                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+                    document.getElementById(`timer-${index}`).innerText = `${days}d ${hours}h ${minutes}m`;
+                } else {
+                    document.getElementById(`timer-${index}`).innerText = "Contest Started!";
+                }
+            });
+        }
+
+        function displayContests(filteredContests = contests) {
+            const contestList = document.getElementById("contest-list");
+            contestList.innerHTML = "";
+            filteredContests.forEach((contest, index) => {
+                const contestDiv = document.createElement("div");
+                contestDiv.classList.add("contest");
+                contestDiv.innerHTML = `
+                    <h3>${contest.name}</h3>
+                    <p>Platform: ${contest.platform}</p>
+                    <p>Starts in: <span class="timer" id="timer-${index}"></span></p>
+                `;
+                contestList.appendChild(contestDiv);
+            });
+            updateCountdown();
+        }
+
+        function filterContests() {
+            const platform = document.getElementById("platformFilter").value;
+            if (platform === "all") {
+                displayContests();
+            } else {
+                const filtered = contests.filter(contest => contest.platform === platform);
+                displayContests(filtered);
+            }
+        }
+
+        displayContests();
+        setInterval(updateCountdown, 60000);
+    </script>
+</body>
+</html>

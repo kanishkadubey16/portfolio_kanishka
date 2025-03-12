@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <link rel="stylesheet" href="forms/style.css"></link>
+<body>
+    <h1>Login page</h1>
+    <form>
+        <div>
+        <label for="full Name">Full name:-</label>
+        <input type="text" placeholder="Enter your name" id="fullname" value="kanishka dubey" minlength="1" maxlength="10"/>
+        <!-- this is the default value(value) -->
+    </div>
+    <div>
+        <label for="AGE">Your age:-</labell>
+            <input type="text" placeholder="Enter your age" id="age" required/>
+        </div>
+    <div>
+            <label for="password">password:-</label>
+                <input type="password" placeholder="Enter your password" id="password"/>
+                <!-- if you use type-password it will not show password but we change it to text it will show -->
+            </div>
+            <div>
+                <h1>Gender</h1>
+                <label for="male">male</label>
+                <input type="checkbox" id = "gender">
+                <label for="female">female</label>
+                <input type="checkbox" id = "gender">
+            </div>
+            
+            <!-- radio button -->
+             <label for="english">English</label>
+             <input type="radio" id="english"/>
+             <label for="hindi">Hindi</label>
+             <input type="radio" id="hindi"/>
+             <!-- submit button< -->
+              <!-- type date -->
+               <label for="">DOB:</label>
+              <input type="date">
+              <input type="time">
+              <!-- select box -->
+               <select>
+                <option>hindi</option>
+                <option>english</option>
+                <option>bengali</option>
+                <option>chinese</option>
+                <option>japanese</option>
+               </select>
+
+
+             <div></div>
+                <input type="submit" value="submit">
+            </div>
+            <label for="theme">Theme</label>
+            <input type="color">
+
+
+            
+    </form>
+    
+</body>
+</html>

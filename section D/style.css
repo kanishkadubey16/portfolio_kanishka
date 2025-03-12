@@ -1,0 +1,24 @@
+h1 {
+    text-align:center;
+}
+form{
+    margin-left:45%;
+}
+input{
+    padding:10px;
+    width:200px;
+    border-radius:8px;
+    margin:10px;
+    color: red;
+
+}
+label{
+    margin:10px;
+    width:30%;
+    display:block;
+    
+}
+input[type="button"]{
+
+}
+

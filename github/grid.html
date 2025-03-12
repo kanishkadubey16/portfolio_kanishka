@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lecture 8</title>
+        <style>
+            *{
+                background-color: black;
+            }
+            .container{
+                display: grid;
+                height:800px;
+                /* grid-template-columns: 400px 200px 100px 200px; */
+                /* grid-template-columns: repeat(4,200px); */
+                grid-template-columns: repeat(4,1fr);
+                grid-template-rows:repeat(5,1fr) ;
+                row-gap: 20px;
+                column-gap: 10px;
+            }
+            .child{
+                background-color: rgb(13, 0, 255);
+                margin:10px;
+                border-radius: 10px;
+            }
+            .child1{
+                background-color: rgb(232, 250, 25);
+                margin:10px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- gird -->
+        <div class="container">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child1"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+        <!-- to  change into grid  -->
+        <!-- syntax grid-template-column  width width width width upto no of columns  -->
+        <!-- it divides the no of elements into no of columns  -->
+        <!-- we cna assign different widths for differnet items -->
+    </body>
+</html>
+
+
+
+
+
+

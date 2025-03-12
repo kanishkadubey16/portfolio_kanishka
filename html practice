@@ -1,0 +1,13 @@
+<doctype! html>
+<html>
+    <head>
+        <title>trying html syntax</title>
+            <body>
+                <h1>seeing an image</h1>
+                <img src="https://trison.in/products/trison-spiral-executive-notebook-no-5-a5-14-x-22-cm" alt="random image">
+
+            </body>
+        
+    </head>
+
+</html>
