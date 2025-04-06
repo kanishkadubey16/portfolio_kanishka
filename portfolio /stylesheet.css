@@ -75,15 +75,41 @@ body {
     opacity: 0;
     animation: fadeIn 1s ease forwards 1s;
 }
+.gradient-text {
+    background: linear-gradient(90deg, #00ffd5, #00bfff, #00ffae); /* brighter aqua shades */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 234, 0.5); /* soft glow effect */
+  }
+  
+  
+  @keyframes pulse-glow {
+  0% {
+    text-shadow: 0 0 5px rgba(0, 255, 234, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 255, 234, 0.9);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(0, 255, 234, 0.5);
+  }
+}
 
+.gradient-text {
+  animation: pulse-glow 3s infinite;
+}
+
+  
+  
 
 .home-content h1 {
-    font-size: 3rem; /* Increase font size */
+    font-size: 3rem; 
     font-weight: bold;
-    color: #fff; /* Ensure visibility */
+    color: #fff; 
     text-align: center;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for better contrast */
-    margin-top: 10px; /* Adjust spacing */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+    margin-top: 10px; 
 }
 
 
@@ -313,7 +339,9 @@ body {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
+    content: "Hi, I'm Kanishka, a passionate developer and creative problem-solver. I specialize in building responsive, modern websites with a strong focus on user experience. With a knack for turning ideas into reality through code, I love exploring new technologies and pushing boundaries to deliver innovative digital solutions.";
 }
+
 
 .about-btn {
     padding: 10px 20px;
